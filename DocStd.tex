@@ -49,36 +49,31 @@ collaboration of separately funded projects to develop standards and
 infrastructure that enable VO applications.
 
 
-\section{Introduction}
+\section{Document types}
+\label{sect:doctypes}
 
-(LATER)
-
-\subsection{Role within the VO Architecture}
-
-\begin{figure}
-\centering
-
-1  Document types
 The IVOA publishes three types of documents:
 
-Recommendation track documents.  These are specifications, guidelines,
+\begin{bigdescription}
+\item[Recommendation track documents]  These are specifications, guidelines,
 etc.  produced by Working Groups. Documents on the Recommendation track
 may progress from Working Draft (WD) to Proposed Recommendation (PR) and
 finally to Recommendation (REC).
 
-Endorsed Notes track documents. An IVOA Endorsed Note is a document
+\item[Endorsed Notes track documents] An IVOA Endorsed Note is a document
 produced within the IVOA which is subject to a review process, but not
 as heavyweight as the recommendation track process (e.g., implementation
 notes, etc.). Documents on the Endorsed Note track may progress from
 Notes, with eventually a Proposed Endorsed Note phase (PEN), to Endorsed
 Notes (EN). Endorsed Notes may refer to a REC.
 
-IVOA Notes.  An IVOA Note is a dated, public record of an idea, comment,
+\item[IVOA Notes]  An IVOA Note is a dated, public record of an idea, comment,
 or document.  Authorship of a Note may vary greatly (e.g., by an IVOA
 Working Group, by an IVOA member, etc.).
+\end{bigdescription}
 
 All public documents are available at the IVOA document repository Web
-site, http://www.ivoa.net/documents/.  IVOA will make every effort to
+site, \url{http://www.ivoa.net/documents/}.  The IVOA will make every effort to
 make archival documents indefinitely available at their original address
 in their original form.
 
@@ -88,7 +83,7 @@ to these guidelines.
 
 The DC may reformat, rename, or renumber documents so as to conform to
 changes in IVOA practice (e.g., changes to document styles or the
-"Status of this Document" section).
+“Status of this Document” section).
 
 Each public document must clearly indicate whether it is a Note, Working
 Draft (WD), Proposed Recommendation (PR), Recommendation (REC), Proposed
@@ -96,7 +91,7 @@ Endorsed Note (PEN), or Endorsed Note (EN).
 
 The primary language for IVOA documents is English.
 
-1.1  Status
+\subsection{Status}
 
 Each document must include a section about the status of the document.
 The status section should explain why IVOA has published the document,
@@ -120,42 +115,44 @@ Note or to respond to comments about the Note.
 Examples of text for Document status which can be used as templates in
 the Status portion of the document are given in Annex.
 
-1.2  Naming and version numbering conventions
+\subsection{Naming and version numbering conventions}
 
 IVOA document names have five components:
 
-1.  A document type code:  NOTE, WD (Working Draft), PR (Proposed
-
+\begin{enumerate}
+\item A document type code:  NOTE, WD (Working Draft), PR (Proposed
 Recommendation), REC (Recommendation), PEN (Proposed Endorsed Note) or EN
 (Endorsed Note).
 
-2.  A concise name, which should be a reasonable condensation of the
+\item A concise name, which should be a reasonable condensation of the
 document title.
 
-3.  A version number of the form I.J, where I and J are integers 0, 1,
-2, ... 9, 10, 11, ... .
+\item A version number of the form I.J, where I and J are integers 0, 1,
+2, \dots 9, 10, 11, \dots
 
-4.  A date.  The date is the GMT date on which the current version of
+\item A date.  The date is the GMT date on which the current version of
 the document was produced, in the format YYYYMMDD.  (This does not allow
 for multiple revisions of a document to be released within one 24-hour
 period.)
 
-5.  An extension (.html, .pdf, .doc, etc.) indicating the media type.
+\item An extension (.html, .pdf, .doc, etc.) indicating the media type.
+\end{enumerate}
 
 The first four components are concatenated, separated by hyphens.
 
 Version numbers follow these guidelines:
 
-  The number to the left of the (first) decimal point starts with 0 for
+\begin{itemize}
+\item The number to the left of the (first) decimal point starts with 0 for
 documents that are being discussed within a Working Group prior to
 publication for IVOA-wide review.  The number increments to 1 for the
-first public version, and to 2, 3, ..., for subsequent versions that are
+first public version, and to 2, 3, \dots, for subsequent versions that are
 not backward compatible and/or require substantial revisions to
 implementations.
 
-  The number to the right of the decimal point is an integer counter,
-beginning with 0 and increasing in simple cardinal order (0, 1, 2, ...
-9, 10, 11, ...).  This number does not track every revision to a
+\item The number to the right of the decimal point is an integer counter,
+beginning with 0 and increasing in simple cardinal order (0, 1, 2, \dots
+9, 10, 11, \dots).  This number does not track every revision to a
 document, but rather, denotes a logical version or conceptually
 consistent view.  This number should only be incremented when there are
 significant and substantial changes to text but few (minor) or no
@@ -164,13 +161,14 @@ fixed as a document is promoted from Working Draft to Proposed
 Recommendation to Recommendation, with editorial revisions indicated by
 the change of date.
 
-  After a document reaches Recommendation or Endorsed Note status,
+\item After a document reaches Recommendation or Endorsed Note status,
 subsequent revisions retrace the promotion process.  Changes that are
 backward compatible result in increments in the number to the right of
-the decimal place (1.1, 1.2, ...).  Changes that are not backward
+the decimal place (1.1, 1.2, \dots).  Changes that are not backward
 compatible require an increment of the number of the left of the decimal
 place (2.0), with subsequent backward compatible revisions following the
-same pattern (2.1, 2.2, ...).
+same pattern (2.1, 2.2, \dots).
+\end{itemize}
 
 The final published and approved Recommendation retains the date on the
 title page of the document, but the date is removed from the document
@@ -179,88 +177,60 @@ filename in order to simplify reference to the document.
 The following examples show a typical name and numbering progression for
 a sample document.
 
-NOTE-MyNewIdea-1.0-20081001.pdf
-WD-ConciseName-0.1-20081225.pdf
-WD-ConciseName-0.1-20081231.pdf
-WD-ConciseName-0.2-20090115.pdf
-WD-ConciseName-0.2-20090201.pdf
-WD-ConciseName-1.0-20090301.pdf
-PR-ConciseName-1.0-20090501.pdf
-PR-ConciseName-1.0-20090615.pdf
-PR-ConciseName-1.0-20090801.pdf
-REC-ConciseName-1.0.pdf
-
-WD-ConciseName-1.1-20100628.pdf
-
-WD-ConciseName-1.1-20100715.pdf
-WD-ConciseName-1.1-20100801.pdf
-PR-ConciseName-1.1-20100815.pdf
-PR-ConciseName-1.1-20100915.pdf
-PR-ConciseName-1.1-20101001.pdf
-REC-ConciseName-1.1.pdf
-
-(initial idea)
-(first Working Draft, in WG)
-(revised 6 days later)
-(text revised substantially)
-(final version in WG before PR)
-(published first version)
-(promoted to PR)
-(updated after RFC)
-(updated after TCG review)
-(accepted as REC; date, e.g.,
-20090901 appears on title page)
-
-(first update to WD in WG;
-does not affect implementation)
-(revised text)
-(revised text)
-(promoted to PR)
-(updated after RFC/TCG review)
-(updated after RFC/TCG review)
-(accepted as REC)
-
-
-WD-ConciseName-2.0-20110628.pdf
-
-WD-ConciseName-2.0-20110715.pdf
-WD-ConciseName-2.0-20110801.pdf
-PR-ConciseName-2.0-20110815.pdf
-PR-ConciseName-2.0-20110915.pdf
-PR-ConciseName-2.0-20111001.pdf
-REC-ConciseName-2.0.pdf
-
-(major update to WD in WG;
-does affect implementation)
-(revised text)
-(revised text)
-(promoted to PR)
-(updated after RFC/TCG review)
-(updated after RFC/TCG review)
-(accepted as REC)
+\begin{tabular}{lp{0.6\textwidth}}
+NOTE-MyNewIdea-1.0-20081001.pdf & (initial idea)\cr
+WD-ConciseName-0.1-20081225.pdf & (first Working Draft, in WG)\cr
+WD-ConciseName-0.1-20081231.pdf & (revised 6 days later)\cr
+WD-ConciseName-0.2-20090115.pdf & (text revised substantially)\cr
+WD-ConciseName-0.2-20090201.pdf & (final version in WG before PR)\cr
+WD-ConciseName-1.0-20090301.pdf & (published first version)\cr
+PR-ConciseName-1.0-20090501.pdf & (promoted to PR)\cr
+PR-ConciseName-1.0-20090615.pdf & (updated after RFC)\cr
+PR-ConciseName-1.0-20090801.pdf & (updated after TCG review)\cr
+REC-ConciseName-1.0.pdf       &   (accepted as REC; date, e.g., 20090901
+appears on title page)\cr
+WD-ConciseName-1.1-20100628.pdf & (first update to WD in WG; does not
+affect implementation)\cr
+WD-ConciseName-1.1-20100715.pdf & (revised text)\cr
+WD-ConciseName-1.1-20100801.pdf & (revised text)\cr
+PR-ConciseName-1.1-20100815.pdf & (promoted to PR)\cr
+PR-ConciseName-1.1-20100915.pdf & (updated after RFC/TCG review)\cr
+PR-ConciseName-1.1-20101001.pdf & (updated after RFC/TCG review)\cr
+REC-ConciseName-1.1.pdf       &   (accepted as REC)\cr
+WD-ConciseName-2.0-20110628.pdf & (major update to WD in WG; does affect
+implementation)\cr\cr
+WD-ConciseName-2.0-20110715.pdf & (revised text)\cr
+WD-ConciseName-2.0-20110801.pdf & (revised text)\cr
+PR-ConciseName-2.0-20110815.pdf & (promoted to PR)\cr
+PR-ConciseName-2.0-20110915.pdf & (updated after RFC/TCG review)\cr
+PR-ConciseName-2.0-20111001.pdf & (updated after RFC/TCG review)\cr
+REC-ConciseName-2.0.pdf       &   (accepted as REC)\cr
+\end{tabular}
 
 In the case of an EN making reference to an existing recommendation, it
 is recommended that the Concise Name of Endorsed Notes includes a
 reference to the Concise Name used in the relevant REC, and an
-indication of its relationship to the REC (e.g.
+indication of its relationship to the REC (e.g.,
 ConciseName-Implementation).
 
 Names will be reviewed and may be modified by the Document Coordinator
 to be consistent with these conventions.  All versions 1.0 and higher
 are stored in the IVOA Document Repository.
 
-1.3  Format
+\subsection{Format}
 
 The standard format for IVOA documents is PDF, though any document
 preparation tools may be used that allow for the publication of PDF and
 that retain the standard formatting elements and style.  In September
 2016, document templates were provided for MSWord, HTML and though
-ivoatex+volute2. Information about the current document templates can be
-found at http://www.ivoa.net/Documents/templates/.  The document source
-in its original format should also be submitted and retained in the IVOA
-document collection.
+ivoatex+volute\footnote{The volute collaborative document system is used
+by IVOA as a facility for document generation, not as a long term
+storage system.}. Information about the current document templates can
+be found at \url{http://www.ivoa.net/Documents/templates/}.  The
+document source in its original format should also be submitted and
+retained in the IVOA document collection.
 
-1.4  How to publish a document
+\subsection{How to publish a document}
 
 Documents are entered into the IVOA document collection by the Document
 Coordinator in response to a request from a Working Group chair or the
@@ -268,14 +238,14 @@ person primarily responsible for editing a particular document.  The
 technical details of the submission process are determined by the
 document coordinator together with the TCG. Current information is
 available on a web page linked from the IVOA document repository.
-1FAbsolute path names must be avoided when packaging the document(s) as
+Absolute path names must be avoided when packaging the document(s) as
 well as when creating internal links within the document.
 
 When problems are encountered during the submission process (e.g.,
 unavailability of the site or too large files), it is necessary to agree
 with the DC on different means of electronic transfer.
 
-1.5  Supplementary resources
+\subsection{Supplementary resources}
 
 The Document Coordinator maintains a repository of supplementary
 resources, such as XML schema, RDF vocabulary definitions, and WSDL
@@ -289,15 +259,12 @@ applicable and seek consistency.  At the same time, authors of auxiliary
 files should include comments stating which standards and versions
 thereof they support.  As of this writing, an XML Schema Versioning
 Policy is on the Endorsed Note track.  Recommendations and Endorsed
-Notes can have errata (Section 4).
-
-1 http://www.ivoa.net/documents/
-
-2 The volute collaborative document system is used by IVOA as a facility
-  for document generation, not as a long term storage system.
+Notes can have errata as per Section~\ref{sect:errata}).
 
 
-2  Standards process
+
+\section{Standards process}
+\label{sect:proc}
 
 The IVOA standards process is used to build consensus around a Virtual
 Observatory technology, both within IVOA and in the VO community as a
@@ -305,7 +272,9 @@ whole. IVOA Working Drafts become Recommendations by following this
 process. The labels that describe increasing levels of maturity and
 consensus in the standards process are:
 
-Note.  An IVOA Note is a dated, public record of an idea, comment,
+
+\begin{bigdescription}
+\item[Note]  An IVOA Note is a dated, public record of an idea, comment,
 practice, experience, insight, advice, guideline, or policy. Authorship
 of a Note may vary greatly (e.g., by an IVOA Working Group, by an IVOA
 member, etc.).  In some circumstances a Note may be the basis for a
@@ -313,23 +282,24 @@ Working Draft or Proposed Endorsed Note/Endorsed Note, but typically
 Notes are used to describe items relevant to the IVOA other than
 descriptions of standards or protocols.
 
-Working Draft.  A document begins on the recommendation track as a
+\item[Working Draft]  A document begins on the recommendation track as a
 Working Draft. A Working Draft is a chartered work item of a Working
 Group and generally represents work in progress and a commitment by IVOA
-to pursue work in a particular area.  The label "Working Draft" does not
+to pursue work in a particular area.  The label ``Working Draft'' does not
 imply that there is consensus within IVOA about the document.
 
-Proposed Recommendation.  A Proposed Recommendation is believed to meet
+\item[Proposed Recommendation]  A Proposed Recommendation is believed to meet
 the relevant requirements of the Working Group's charter and any
 accompanying requirements documents, to represent sufficient
 implementation experience, and to adequately address dependencies from
 the IVOA technical community and comments from previous reviewers.
 
-IVOA Recommendation.  An IVOA Recommendation is a document that is the
+\item[IVOA Recommendation]  An IVOA Recommendation is a document that is the
 end result of extensive consensus-building within the IVOA about a
 particular technology or policy.  IVOA considers that the ideas or
 technology specified by a Recommendation are appropriate for widespread
-deployment and promote IVOA's mission.4F
+deployment and promote IVOA's mission.
+\end{bigdescription}
 
 Generally, Working Groups create Working Drafts with the intent of
 advancing them through the standards process. However, publication of a
@@ -350,15 +320,13 @@ Working Draft for further work.  The relationship between Working
 Drafts, Proposed Recommendations, and Recommendations is shown in the
 figure below.
 
-3  http://www.ivoa.net/about/what-is-ivoa.html
-
-
 Some documents which are not IVOA standards (e.g., the IVOA Architecture
 Document, implementation notes, etc.) may require discussion, evaluation
 and endorsement. They are subject to a lighter-weight endorsement
-process, the Endorsed Note one, which is described in Section 3.
+process, the Endorsed Note one, which is described in
+Section~\ref{sect:en}.
 
-2.1  Working Draft (WD)
+\subsection{Working Draft (WD)}
 
 IVOA official documents begin as Working Drafts.  Working Drafts are the
 purview of a Working Group.  Working Drafts may undergo numerous
@@ -367,7 +335,7 @@ Drafts are not included in the formal IVOA document collection, but
 rather are maintained by the responsible working group in its area of
 the IVOA TWiki.
 
-Entrance criteria.  A Working Draft is published at the discretion of a
+\paragraph{Entrance criteria}  A Working Draft is published at the discretion of a
 Working Group once the WG is satisfied that the document is sufficiently
 developed to merit broader exposure and feedback.  Publication of a
 Working Draft is not an assertion of consensus, of endorsement, or of
@@ -377,29 +345,30 @@ Working Draft even if it is unstable and does not meet all Working Group
 requirements.  Working Drafts are subject to review by the document
 coordinator for compliance to these guidelines.
 
-Ongoing work.  Once a Working Draft has been published, the Working
+\paragraph{Ongoing work}  Once a Working Draft has been published, the Working
 Group should continue to develop it by encouraging review and feedback
 within and outside of IVOA.  The TCG may decide to classify a Working
 Drafts which is no longer under development in the “Historical”
 category.
 
-Next maturity level.  After a suitable review and trial period, the
+\paragraph{Next maturity level}  After a suitable review and trial period, the
 chair of the Working Group may promote the Working Draft to a Proposed
 Recommendation.  Such advancement should occur only when the chair of
 the Working Group is satisfied that consensus has been reached, and more
 formal and extensive review is now warranted.  Advancement to Proposed
 Recommendation implies:
 
-1.  The Working Group has fulfilled the relevant requirements of the
+\begin{enumerate}
+\item The Working Group has fulfilled the relevant requirements of the
 Working Group charter and those of any accompanying requirements
 documents.
 
-2.  The Working Group has formally addressed issues raised during the
+\item The Working Group has formally addressed issues raised during the
 development and review process (possibly modifying the document).
 
-3.  The Working Group has reported all formal objections.
+\item The Working Group has reported all formal objections.
 
-4.  When applicable, the Working Group should be able to demonstrate two
+\item When applicable, the Working Group should be able to demonstrate two
 interoperable implementations of each feature, and validation tools
 should be available. The rules for implementation references can be
 specific to a working group. If the chair of the Working Group believes
@@ -410,20 +379,22 @@ section should indicate why the chair promoted the document directly to
 Proposed Recommendation.  A report describing the implementations or any
 associated validation tools should be published as a Note, or should be
 documented as part of the Request for Comments (see below).
+\end{enumerate}
 
-2.2  Proposed Recommendation (PR)
+\subsection{Proposed Recommendation (PR)}
+\label{sect:rfc}
 
-Entrance criteria.  Proposed Recommendations are published by the chair
+\paragraph{Entrance criteria}  Proposed Recommendations are published by the chair
 of a Working Group following the criteria described above.  Proposed
 Recommendations are considered to be technically mature and ready for
 wide review.
 
-Ongoing work.   The Working Group should continue to encourage review
+\paragraph{Ongoing work}   The Working Group should continue to encourage review
 and feedback within and outside of IVOA. The TCG may decide to classify
 the Proposed Recommendations which are no longer under development in
 the “Historical” category.
 
-Next maturity level.  The chair of the Working Group that developed the
+\paragraph{Next maturity level}  The chair of the Working Group that developed the
 Proposed Recommendation may call for a formal Request for Comments
 (RFC).  The RFC is sent to the widest possible IVOA distribution lists
 (interop@ivoa.net) and published by adding a link to the RFC on the IVOA
@@ -435,8 +406,8 @@ Proposed Recommendation during the RFC period and post comments in the
 public record.  The chair and vice-chair of the Interest Groups are also
 encouraged to examine the Proposed Recommendation and to post comments
 in the public record. Comments from TCG members (the WG and IG chairs
-and vice-chairs) may be no more than ʺread and approvedʺ or ʺno
-dependencyʺ but if TCG members have significant concerns it is during
+and vice-chairs) may be no more than “read and approved“ or “no
+dependency” but if TCG members have significant concerns it is during
 the RFC period that these must be documented.  It is sufficient to have
 one input per WG and IG but it is expected that the Chairs of a Group
 work in co-operation with each other.
@@ -473,13 +444,13 @@ forwards this recommendation to the Executive Committee for review and
 approval. If the Executive Committee is satisfied that the procedure has
 been properly followed, they promote the document to a Recommendation.
 
-2.3  Recommendation (REC)
+\subsection{Recommendation (REC)}
 
-Entrance criteria.  Recommendations are published by the IVOA Executive
+\paragraph{Entrance criteria}  Recommendations are published by the IVOA Executive
 Committee following the criteria described above.  Recommendations are
 the final form of IVOA documents and constitute an IVOA Standard.
 
-Ongoing work.   The WG chair in cooperation with the document editors
+\paragraph{Ongoing work}   The WG chair in cooperation with the document editors
 should prepare a StandardsRegExt record for the new REC and submit it to
 the Registry of Ressources.  Recommendations may need to be revised and
 extended as time goes on.  Significant revisions of Recommendations must
@@ -490,7 +461,7 @@ following the procedure described in section 4. Further work on the
 evolution of the recommendation is documented in the relevant Working
 Group pages.
 
-Next maturity level.  A Recommendation is the highest level of maturity
+\paragraph{Next maturity level}  A Recommendation is the highest level of maturity
 for an IVOA document.  The IVOA Executive Committee may propose that
 Recommendations be endorsed as standards by the International
 Astronomical Union, working through IAU Commission B2 Data and
@@ -498,24 +469,31 @@ Documentation or its successor. The TCG may decide to deprecate a
 Recommendation, which is then kept in the Document repository in the
 “Historical” category.
 
-2.4  Document promotion process summary
+\begin{figure}
+\includegraphics{procsummary.png}
+\caption{The IVOA REC process in a graphical representation}
+\label{fig:procsummary}
+\end{figure}
+
+\subsection{Document promotion process summary}
 
 The IVOA document promotion process is summarized in graphical form in
-the figure below.
+Figure~\ref{fig:procsummary}.
 
-1.  Working Group prepares Working Draft (version ≥1.0) and submits to
+\begin{enumerate}
+\item Working Group prepares Working Draft (version $\geq 1.0$) and submits to
 Document Coordinator for posting in the IVOA document collection.
 
-2.  Working Group reviews the Working Draft. Two reference
+\item Working Group reviews the Working Draft. Two reference
 implementations of any associated software are expected, as well as
 provision of validation tools, otherwise an explanation should be
 provided.
 
-3.  The Chair of the Working Group, with consent of the WG, promotes the
+\item The Chair of the Working Group, with consent of the WG, promotes the
 document to a Proposed Recommendation and submits it to the Document
 Coordinator for posting in the IVOA document collection.
 
-4.  The Chair of the Working Group issues a formal Request for Comments
+\item The Chair of the Working Group issues a formal Request for Comments
 (RFC) to the e-mail distribution list interop@ivoa.net. The RFC and all
 comments must be logged on a globally editable page whose URL is given
 in the RFC. A minimum comment period of 6 weeks must be allowed. The
@@ -524,12 +502,12 @@ Proposed Recommendations during the RFC period and to post comments in
 the public record, the chairs and vice-chairs of Interest Groups are
 invited to do so.
 
-5.  The Working Group Chair and/or editor(s) respond to comments on the
+\item The Working Group Chair and/or editor(s) respond to comments on the
 RFC page. If comments lead to significant changes to the document, the
 WG Chair may decide to revert the document status to Working Draft (back
 to Step 1).
 
-6.  If comments are addressed to the satisfaction of the WG Chair and WG
+\item If comments are addressed to the satisfaction of the WG Chair and WG
 members, the WG Chair requests a final vote, to be completed within 2
 weeks, by the Technical Coordination Group, and they add their final
 yes/no vote to the RFC record.  Working Groups are required to provide a
@@ -539,19 +517,28 @@ the Working Group responsible for the PR, then makes a final summary
 recommendation and the chair of the Technical Coordination Group submits
 the PR to the Executive Committee for approval.
 
-7.  The Executive Committee is polled by the IVOA Chair to ascertain if
+\item The Executive Committee is polled by the IVOA Chair to ascertain if
 there is consensus for promotion to Recommendation.
 
-8.  If yes, the IVOA Chair reports on approval to the TCG and WG Chairs
+\item If yes, the IVOA Chair reports on approval to the TCG and WG Chairs
 and asks the Document Coordinator to update the document status to
 Recommendation. If no, the concerns of the IVOA Executive need to be
 resolved and a new poll taken, or if serious revisions are required, the
 document would revert to Step 1.
 
-9.  The IVOA Executive may propose to the IAU Commission B2 or its
+\item The IVOA Executive may propose to the IAU Commission B2 or its
 successor that IVOA Recommendations be endorsed as IAU Standards.
+\end{enumerate}
 
-3  Endorsed Notes process
+\begin{figure}
+\includegraphics{ensummary.png}
+\caption{The IVOA Endorsed Note process in a graphical representation}
+\label{fig:ensummary}
+\end{figure}
+
+
+\section{Endorsed Notes process}
+\label{sect:en}
 
 Some documents require an endorsement by IVOA but a lighter weight
 review process than the one undergone by the IVOA Recommendations. They
@@ -559,7 +546,7 @@ follow the Endorsed Note process, managed by the Technical Coordination
 Group. This is the case for instance for the IVOA Architecture Documents
 or for implementation notes.
 
-Entrance  criteria.  Endorsed  Notes  can  be  proposed  by  an
+\paragraph{Entrance  criteria}  Endorsed  Notes  can  be  proposed  by  an
 Interest  Group,  a  Working Group,  the  Technical  Coordination
 Group,  or  more  generally  be  documents  produced within the IVOA.
 They circulate among the authors, and in the Working Group, Interest
@@ -568,27 +555,29 @@ sufficient  maturity  level.  The  endorsement  process  is  managed  by
 the  Technical  Coordination  Group  and  the Note can be endorsed by a
 Working Group.
 
-Proposed  Endorsed  Note  (optional).    A  Proposed  Endorsed  Note  is
+\paragraph{Proposed  Endorsed  Note  (optional)}  A  Proposed  Endorsed  Note  is
 submitted  to  a Request for Comment following the procedure described
-in Section 2.2.
+in Section~\ref{sect:rfc}.
 
-Endorsed Notes. An Endorsed Note has been endorsed by the Technical
+\paragraph{Endorsed Notes} An Endorsed Note has been endorsed by the Technical
 Coordination Group.  Endorsed  Notes  constitute  valuable  information
 for  the  IVOA  community,  by themselves or as complement of
 Recommendations.
 
-Process. The Endorsed Note process is managed by the Technical
+\paragraph{Process} The Endorsed Note process is managed by the Technical
 Coordination Group.  The party proposing the Note endorsement submits it
 to the TCG. The TCG decides the process to apply in the specific case of
 the document. There are two possibilities:
 
-1.  The  TCG  decides  to  submit  the  possibility  to  promote  the
+\begin{enumerate}
+\item The  TCG  decides  to  submit  the  possibility  to  promote  the
 Note  to  Endorsed Note  to  a  Request  for  Comments  following  the
-procedure  described  in  Section 2.2. The Note is then passed to
+procedure  described  in  Section~\ref{sect:rfc}. The Note is then passed to
 Proposed Endorsed Note (PEN) status.
 
-2.  The  TCG  decides  that  there  is  no  need  for  a  Request  for
+\item The  TCG  decides  that  there  is  no  need  for  a  Request  for
 Comments  and decides to promote the Note directly to Endorsed Note.
+\end{enumerate}
 
 For  each  meeting  of  the  Executive  Committee,  the  TCG  chair
 prepares  a  list  of  the Endorsed  Notes  passed  since  the  last
@@ -601,24 +590,32 @@ document collection.  Endorsed  Notes  linked  to  a  standard  are
 visible  in  the  relevant  standard landing page.
 
 
-4  Errata
+\section{Errata}
+\label{sect:errata}
 
 As a recommendation is published in the IVOA document repository, a
-globally editable 4 titled <ConciseName>-<CurrentVersion>-Errata is
+globally editable\footnote{As of this writing, the page will reside in
+IVOA's wiki, but the technical details are not part of this standard.}
+titled
+$\langle$ConciseName$\rangle$-$\langle$CurrentVersion$\rangle$-Errata is
 created, and a link to it is page created in the working group's landing
 page, as well as in the header of the Standard document text.  This
-"-Errata" page will have three sections:
+“-Errata“ page will have three sections:
 
-  Accepted Errata
-  Rejected Errata
-  Proposed Errata
+\begin{itemize}
+\item Accepted Errata
+\item Rejected Errata
+\item Proposed Errata
+\end{itemize}
 
 One such Errata-page is maintained per recommendation (i.e., standards
 version); as a new version of the REC is passed, a new, empty -Errata
 page is created and linked to the working group’s landing page and in
 the header of the Standard document text.  All the Errata sections will
 consist of listings whose items are pointers to globally editable pages
-titled <ConciseName>-<CurrentVersion>-Erratum-<RunningNumber> where the
+titled
+$\langle$ConciseName$\rangle$-$\langle$CurrentVersion$\rangle$-Erratum-$\langle$RunningNumber$\rangle$
+where the
 text for the erratum will physically reside.  The Errata page must be
 linked from the document text and from the standard's landing page, even
 when it is still empty.  Rejected and Proposed Errata not yet reviewed
@@ -634,12 +631,14 @@ Errata have a formal process.  To start it, any interested party can
 create a proposal for an erratum which should contain text, when
 relevant, on each of
 
-  Original wording and new wording
-  Rationale
- Impact Assessment
+\begin{itemize}
+\item  Original wording and new wording
+\item  Rationale
+\item Impact Assessment
+\end{itemize}
 
 If elements are to be deleted or added from the document, the
-surrounding text should be identified
+surrounding text should be identified.
 
 The proposed erratum is then announced on the Working Group's mailing
 list, which should also be the main medium of discussing the erratum.
@@ -665,10 +664,6 @@ date (and hence the freezing date) of the erratum.  Links to accepted
 Accepted (Rejected) Errata section.   Errata deferred are unfrozen and
 open to further discussion and/or refinement.
 
-4 As of this writing, the page will reside in IVOA's wiki, but the
-technical details are not part of this standard
-5 As of this writing, this would be the working group page in IVOA's wiki.
-
 For each meeting of the Executive Committee, the TCG chair prepares a
 list of the errata passed since the last meeting of the Executive
 Committee with a summary of their history. The Executive Committee can
@@ -680,7 +675,8 @@ A list of all errata accepted for a document together with links to them
 is also maintained on the document's landing page in the IVOA document
 repository while the version in question is the most recent one.
 
-5  The document collection
+\section{The document collection}
+\label{sect:doccoll}
 
 The IVOA document collection is the primary source for IVOA documents.
 IVOA users, especially from outside the core collaboration, should
@@ -698,172 +694,163 @@ document collection web site has a link to the Community Twiki area 6
 where Working Drafts in-progress may be found, but links will not be
 provided to individual pre-publication Working Drafts.
 
-6 http://www.ivoa.net/twiki/bin/view/IVOA/WebHome
-
 \appendix
 \section{Changes from Previous Versions}
 
-From 1.2 to 2.0
+\subsection{From 1.2 to 2.0}
 
-  Updated table of content
-  Address of the document repository changed to
+\begin{itemize}
+\item  Updated table of content
+\item  Address of the document repository changed to
 http://www.ivoa.net/documents/
-
-
-In Section 1, added reference to the Proposed Endorsed Notes and
+\item In Section 1, added reference to the Proposed Endorsed Notes and
 Endorsed Notes type of document.
-In Section 1.2, added reference to the Annex with recommended document
+\item In Section 1.2, added reference to the Annex with recommended document
 status texts
-In Section 1.2, added reference to PEN and EN
-In Section 1.2, corrected typos in the examples of names, updated
+\item In Section 1.2, added reference to PEN and EN
+\item In Section 1.2, corrected typos in the examples of names, updated
 description of the progression to take into account the changes in the
 processes (does not affect implementation, RFC/TCG review)
-In section 1.3, added reference to the usage of volute
-In Section 1.4, deleted reference to the way the submission process is
+\item In section 1.3, added reference to the usage of volute
+\item In Section 1.4, deleted reference to the way the submission process is
 implemented
-In section 1.5, added a reference to the XML Schema Versioning Policy
+\item In section 1.5, added a reference to the XML Schema Versioning Policy
 Endorsed
 Note and to errata.
-In Section 2, added reference to Draft Endorsed Note as a possible
+\item In Section 2, added reference to Draft Endorsed Note as a possible
 evolution of a Note
-In Section 2, added ‘on the recommendation track’ to the WD description
-In Section 2, updated the link to the IVOA mission in the footnote
-In Section 2, added a reference to the “Historical” category
-In Section 2, at the end of the introduction, added a final paragraph to
+\item In Section 2, added ‘on the recommendation track’ to the WD description
+\item In Section 2, updated the link to the IVOA mission in the footnote
+\item In Section 2, added a reference to the “Historical” category
+\item In Section 2, at the end of the introduction, added a final paragraph to
 introduce the Endorsed Notes process.
-In Section 2.1, added a reference to the “Historical” category
-In Section 2.1, deleted the sentence “Each feature of the Working Draft
+\item In Section 2.1, added a reference to the “Historical” category
+\item In Section 2.1, deleted the sentence “Each feature of the Working Draft
 has been implemented, added “When applicable” in the discussion of
 reference implementations and validation tools, added the fact that
 rules for implementation references can depend on the WG matter, add the
 possibility to waive the requirement to have a validation tool
-In Section 2.2, added a reference to the “Historical” category
-In section 2.2, Next maturity level, first paragraph, deleted the
+\item In Section 2.2, added a reference to the “Historical” category
+\item In section 2.2, Next maturity level, first paragraph, deleted the
 initial two-week publication period and the reference to the possibility
 to return the document to WD
-In section 2.2., added the possibility to issue incremental versions or
+\item In section 2.2., added the possibility to issue incremental versions or
 to return to WD
-In Section 2.2, Next maturity version, second paragraph, TCG members to
+\item In Section 2.2, Next maturity version, second paragraph, TCG members to
 comment PRs during the RFC, TCG Review limited to yes/no vote (“TCG
 vote”); RFC 6 weeks instead of 4, iterative process for RFC, TCG review
 2 weeks instead of 4; update of the figure
-In Section 2.2, re-ordering of the text to put together the discussion
+\item In Section 2.2, re-ordering of the text to put together the discussion
 of reference implementations, adding a reference to validation tools and
 how to proceed when the two required reference implementations and/or
 the validation tools are not available when promotion to REC is
 submitted
-In Section 2.2, clarified that the Chair and Vice-Chair of a Group must
+\item In Section 2.2, clarified that the Chair and Vice-Chair of a Group must
 examine a PR and that one vote per Group is sufficient but it is
 expected that the Chairs of a Group work in co-operation with each other
-In section 2.2, changed the Executive Committee role to “be satisfied
+\item In section 2.2, changed the Executive Committee role to “be satisfied
 that the procedure has been properly followed”
-In Section 2.3, added the requirement to provide a StandardRegExt record
-In Section 2.3, addition of a reference to errata and other on-going work
-In Section 2.3, replacement of IAU Commission 5 by IAU Commission B2
-In Section 2.3, added a reference to the “Historical” category
-In Section 2.4, 2., added a reference to explanations to be provided to
-wave the reference implementation and validation software requirement
-In Section 2.4, 4., changed “TWiki” to “globally editable page”
-In Section 2.4, 4. deleted the reference to the initial two-week period
-In Section 2.4, 5. Clarify the respective roles of the WG chair and editor(s)
-In Section 2.4, update of the summary figure to reflect the new Recommendation
+\item In Section 2.3, added the requirement to provide a StandardRegExt record
+\item In Section 2.3, addition of a reference to errata and other on-going work
+\item In Section 2.3, replacement of IAU Commission 5 by IAU Commission B2
+\item In Section 2.3, added a reference to the “Historical” category
+\item In Section 2.4, 2., added a reference to explanations to be provided to
+waive the reference implementation and validation software requirement
+\item In Section 2.4, 4., changed “TWiki” to “globally editable page”
+\item In Section 2.4, 4. deleted the reference to the initial two-week period
+\item In Section 2.4, 5. Clarify the respective roles of the WG chair and editor(s)
+\item In Section 2.4, update of the summary figure to reflect the new Recommendation
 process
-
-  Addition of Section 3 to describe the Endorsed Notes Process
-  Added Section 4 on -Errata pages and Errata
-
-
-
-  Section 6: Changes from Version 1.2 to 2 added
-
-In Section 3, Section numbering changed to Section 5
-In Section 5, added reference to PEN/EN and “Historical” documents
-In Section 4, Section numbering changed to Section 6
-
-Appendix: Template text added for Proposed Endorsed Notes and Endorsed Notes.
-
-In Section 1.3, changed the required format for documents to PDF and
+\item  Addition of Section 3 to describe the Endorsed Notes Process
+\item  Added Section 4 on -Errata pages and Errata
+\item In Section 3, Section numbering changed to Section 5
+\item In Section 5, added reference to PEN/EN and “Historical” documents
+\item In Section 4, Section numbering changed to Section 6
+\item Template text added for Proposed Endorsed Notes and Endorsed Notes.
+\item In Section 1.3, changed the required format for documents to PDF and
 added
-
-In Section 1, added explicit reference to the URL for the IVOA document
+\item In Section 1, added explicit reference to the URL for the IVOA document
 repository.  In Section 1, added “The DC may reformat, rename, or
 renumber documents” to
+\end{itemize}
 
-From 1.1 to 1.2
+\subsection{From 1.1 to 1.2}
 
-allow for standardization in naming and numbering of IVOA documents.
-  Changed “technical report” to “document” throughout.
-  Rewrote Section 1.2 to include new naming and numbering scheme using
+\begin{itemize}
+\item Allow for standardization in naming and numbering of IVOA documents.
+\item  Changed “technical report” to “document” throughout.
+\item  Rewrote Section 1.2 to include new naming and numbering scheme using
 .pdf file extensions to be consistent with change to Section 1.3.
- requirement to submit and store document in its original format.
-  Added Section 1.4 “How to Publish a Document” from the IVOA Note,
+\item requirement to submit and store document in its original format.
+\item  Added Section 1.4 “How to Publish a Document” from the IVOA Note,
 Guidelines and Procedures for IVOA Document Standards Management V1.0.
-  Added Section 1.5 “Supplementary Resources” from the IVOA Note,
+\item  Added Section 1.5 “Supplementary Resources” from the IVOA Note,
 Guidelines and Procedures for IVOA Document Standards Management V1.0.
-In Section 2, added paragraph to clarify the function of Notes.
-In Section 2.1, added introductory paragraph describing early phases of
+\item In Section 2, added paragraph to clarify the function of Notes.
+\item In Section 2.1, added introductory paragraph describing early phases of
 WD development from the IVOA Note, Guidelines and Procedures for IVOA
 Document Standards Management V1.0, and clarified entrance criteria for
 Working Draft.
-implementations.
-repository web page.
-In Sections 2.2 and 2.4, updated the role of the TCG in the review of
+\item In Sections 2.2 and 2.4, updated the role of the TCG in the review of
 documents during the RFC period.  Section 2.2 includes text concerning
 the requirement for at least two interoperable implementations and under
 what circumstances this requirement can be waived.
-
-  Added Section 3 “The document collection” with text from Sections 6
+
+\item  Added Section 3 “The document collection” with text from Sections 6
 and 7 of the IVOA Note, Guidelines and Procedures for IVOA Document
 Standards Management V1.0.
-  Updated table of contents.
+\item  Updated table of contents.
 
-In Section 2.4, updated the diagram to show more clearly the TCG participation.
+\item In Section 2.4, updated the diagram to show more clearly the TCG participation.
 
-In Section 2.2, clarified how RFCs are published through the IVOA document
+\item In Section 2.2, clarified how RFCs are published through the IVOA document
 
-In Section 2.1, added text describing documentation of interoperable
+\item In Section 2.1, added text describing documentation of interoperable
 
-From 1.0 to 1.1
-  The role of the Technical Coordination Group (which comprises the
+\subsection{From 1.0 to 1.1}
+
+\item  The role of the Technical Coordination Group (which comprises the
 Working Group chairs and deputies and Interest Group chairs and
 deputies) has been made explicit in Section 2.2 describing the RFC
 process.
 
-  A summary of the process has been added in Section 2.4 and the figure
+\item  A summary of the process has been added in Section 2.4 and the figure
 showing the process has been moved into this new section.
 
-  The figure has been updated to reflect the TCG review and to show
+\item  The figure has been updated to reflect the TCG review and to show
 that Recommendations may be referred to the IAU as appropriate.
 
-  Added Appendix with sample text for describing the Status of a document.
-
+\item  Added Appendix with sample text for describing the Status of a document.
+\end{itemize}
 
 \section{Recommended Text for Document Status}
 
 The following text examples may be used as templates in the Status
 portion of the document.
 
-Note
+\subsection{Note}
 This is an IVOA Note expressing suggestions from and opinions of the
 authors. It is intended to share best practices, possible approaches, or
 other perspectives on interoperability with the Virtual Observatory. It
 should not be referenced or otherwise interpreted as a standard
 specification.
 
-Working Draft
+\subsection{Working Draft}
 This is an IVOA Working Draft for review by IVOA members and other
 interested parties.  It is a draft document and may be updated,
 replaced, or obsoleted by other documents at any time. It is
 inappropriate to use IVOA Working Drafts as reference materials or to
 cite them as other than “work in progress”.
 
-Proposed Recommendation
+\subsection{Proposed Recommendation}
+
 This is an IVOA Proposed Recommendation made available for public
 review. It is appropriate to reference this document only as a
 recommended standard that is under review and which may be changed
 before it is accepted as a full Recommendation.
 
-Recommendation
+\subsection{Recommendation}
+
 This document has been produced by the IVOA [working group name] Working
 Group.  It has been reviewed by IVOA Members and other interested
 parties, and has been endorsed by the IVOA Executive Committee as an
@@ -874,13 +861,15 @@ to the specification and to promote its widespread deployment. This
 enhances the functionality and interoperability inside the Astronomical
 Community.
 
-Proposed Endorsed Note
+\subsection{Proposed Endorsed Note}
+
 This is an IVOA Proposed Endorsed Note for review by IVOA members and
 other interested parties. It is appropriate to reference this document
 only as a Proposed Endorsed Note that is under review and may change
 before it is endorsed or may not be endorsed.
 
-Endorsed Note
+\subsection{Endorsed Note}
+
 This document is been produced by […]. It has been endorsed by the IVOA
 Technical Coordination Group as a stable, citable document which
 constitutes valuable information for the IVOA community and beyond.
