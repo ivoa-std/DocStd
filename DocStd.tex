@@ -220,16 +220,15 @@ are stored in the IVOA Document Repository.
 
 \subsection{Format}
 
-The standard format for IVOA documents is PDF, though any document
-preparation tools may be used that allow for the publication of PDF and
-that retain the standard formatting elements and style.  In September
-2016, document templates were provided for MSWord, HTML and though
-ivoatex+volute\footnote{The volute collaborative document system is used
-by IVOA as a facility for document generation, not as a long term
-storage system.}. Information about the current document templates can
-be found at \url{http://www.ivoa.net/Documents/templates/}.  The
-document source in its original format should also be submitted and
-retained in the IVOA Document Repository.
+IVOA documents must be available in both PDF and HTML formats and must
+be developed in publicly accessible version control systems.
+
+The use of the IVOA's designated authoring system is strongly encouraged
+to foster cooperation and enable painless resumption of standards
+development by other editors as well as the management of errata.
+
+See \citet{note:ivoatexdoc25} for a non-normative overview of IVOA
+practices as of the current revision of this document.
 
 \subsection{How to publish a document}
 
@@ -693,6 +692,14 @@ published versions of documents remain available.
 \appendix
 \section{Changes from Previous Versions}
 
+\subsection{From 2.0 to 2.1}
+
+\begin{itemize}
+\item Now formally requiring both HTML and PDF; also, dropping the
+reference to outdated templates and nudging people towards ivoatex.
+\end{itemize}
+
+
 \subsection{From 1.2 to 2.0}
 
 \begin{itemize}
@@ -870,7 +877,7 @@ This document is been produced by […]. It has been endorsed by the IVOA
 Technical Coordination Group as a stable, citable document which
 constitutes valuable information for the IVOA community and beyond.
 
-\bibliography{ivoatex/ivoabib,ivoatex/docrepo}
+\bibliography{ivoatex/ivoabib,ivoatex/docrepo,local}
 
 
 \end{document}
