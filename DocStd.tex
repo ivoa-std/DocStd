@@ -8,11 +8,11 @@
 
 \author{Genova, F.}
 \author{Arviset, C.}
-\author{Demleitner, , M.}
+\author{Demleitner, M.}
 \author{Glendenning, B.}
-\author{Molinaro, , M.}
-\author{ Hanisch, R.J.}
-\author{Rino , B.}
+\author{Molinaro, M.}
+\author{Hanisch, R.J.}
+\author{Rino, B.}
 
 \editor{Demleitner, M.; Dowler, P.}
 
@@ -23,9 +23,10 @@
 
 \begin{document}
 \begin{abstract}
-This document describes the types of official IVOA documents and the
-process by which documents are advanced from Working Drafts to formal
-Recommendations and from Notes to Endorsed Notes
+The International Virtual Observatory Association (IVOA) issues various
+documents in foster interoperability of astronomical data and services.
+This document describes the types and roles of these documents and
+their review processes.
 \end{abstract}
 
 
@@ -78,7 +79,7 @@ make archival documents indefinitely available at their original address
 in their original form.
 
 The IVOA Executive Committee appoints a Documentation Coordinator (DC)
-who oversees the document collection and assures that documents conform
+who oversees the Document Repository and assures that documents conform
 to these guidelines.
 
 The DC may reformat, rename, or renumber documents so as to conform to
@@ -228,11 +229,11 @@ by IVOA as a facility for document generation, not as a long term
 storage system.}. Information about the current document templates can
 be found at \url{http://www.ivoa.net/Documents/templates/}.  The
 document source in its original format should also be submitted and
-retained in the IVOA document collection.
+retained in the IVOA Document Repository.
 
 \subsection{How to publish a document}
 
-Documents are entered into the IVOA document collection by the Document
+Documents are entered into the IVOA Document Repository by the Document
 Coordinator in response to a request from a Working Group chair or the
 person primarily responsible for editing a particular document.  The
 technical details of the submission process are determined by the
@@ -248,19 +249,15 @@ with the DC on different means of electronic transfer.
 \subsection{Supplementary resources}
 
 The Document Coordinator maintains a repository of supplementary
-resources, such as XML schema, RDF vocabulary definitions, and WSDL
-files.  Developers and any type of validation system/service should use
+resources, such as XML schemas or RDF vocabulary definitions.
+Implementations should use
 these in preference to copies stored elsewhere.  There is, however, no
 requirement to use them if a different implementation yields compliance
-with a given standard.  Such additional items are considered part of the
-implementation but not part of the standard itself.  Standards document
-authors should, however, reference them as informative appendices if
-applicable and seek consistency.  At the same time, authors of auxiliary
-files should include comments stating which standards and versions
-thereof they support.  As of this writing, an XML Schema Versioning
-Policy is on the Endorsed Note track.  Recommendations and Endorsed
-Notes can have errata as per Section~\ref{sect:errata}).
+with a given standard.
 
+At the same time, authors of auxiliary
+files should include comments stating which standards and versions
+thereof they reflect.
 
 
 \section{Standards process}
@@ -328,12 +325,15 @@ Section~\ref{sect:en}.
 
 \subsection{Working Draft (WD)}
 
-IVOA official documents begin as Working Drafts.  Working Drafts are the
-purview of a Working Group.  Working Drafts may undergo numerous
-revisions during their development.  During this volatile phase Working
-Drafts are not included in the formal IVOA document collection, but
-rather are maintained by the responsible working group in its area of
-the IVOA TWiki.
+Official IVOA documents begin as Working Drafts.  Before a document
+becomes a Working Draft, it is within the
+purview of a Working Group; this stage is sometimes called an Internal
+Working Draft.  Internal Working Drafts may undergo numerous
+revisions during their development.  During this volatile phase, documents
+are not shown in the IVOA document repository, but
+rather are maintained by the responsible working group a suitable
+version control system.  The IVOA history of a document starts with its
+promotion to a Working Draft.
 
 \paragraph{Entrance criteria}  A Working Draft is published at the discretion of a
 Working Group once the WG is satisfied that the document is sufficiently
@@ -482,7 +482,7 @@ Figure~\ref{fig:procsummary}.
 
 \begin{enumerate}
 \item Working Group prepares Working Draft (version $\geq 1.0$) and submits to
-Document Coordinator for posting in the IVOA document collection.
+Document Coordinator for posting in the IVOA Document Repository.
 
 \item Working Group reviews the Working Draft. Two reference
 implementations of any associated software are expected, as well as
@@ -491,7 +491,7 @@ provided.
 
 \item The Chair of the Working Group, with consent of the WG, promotes the
 document to a Proposed Recommendation and submits it to the Document
-Coordinator for posting in the IVOA document collection.
+Coordinator for posting in the IVOA Document Repository.
 
 \item The Chair of the Working Group issues a formal Request for Comments
 (RFC) to the e-mail distribution list interop@ivoa.net. The RFC and all
@@ -586,14 +586,15 @@ history. The Executive Committee can withdraw an Endorsed Note with an
 explanation of the withdrawal reason.
 
 Proposed  Endorsed  Notes  and  Endorsed  Notes  appear  in  the  IVOA
-document collection.  Endorsed  Notes  linked  to  a  standard  are
+Document Repository.  Endorsed  Notes  linked  to  a  standard  are
 visible  in  the  relevant  standard landing page.
 
 
 \section{Errata}
 \label{sect:errata}
 
-As a recommendation is published in the IVOA document repository, a
+As a Recommendation or Endorsed Note is published
+in the IVOA document repository, a
 globally editable\footnote{As of this writing, the page will reside in
 IVOA's wiki, but the technical details are not part of this standard.}
 titled
@@ -608,7 +609,8 @@ page, as well as in the header of the Standard document text.  This
 \item Proposed Errata
 \end{itemize}
 
-One such Errata-page is maintained per recommendation (i.e., standards
+One such Errata-page is maintained per Recommendation or Endorsed Note
+(i.e., standards
 version); as a new version of the REC is passed, a new, empty -Errata
 page is created and linked to the working group’s landing page and in
 the header of the Standard document text.  All the Errata sections will
@@ -675,24 +677,18 @@ A list of all errata accepted for a document together with links to them
 is also maintained on the document's landing page in the IVOA document
 repository while the version in question is the most recent one.
 
-\section{The document collection}
+\section{The Document Repository}
 \label{sect:doccoll}
 
-The IVOA document collection is the primary source for IVOA documents.
+The IVOA Document Repository is the primary source for IVOA documents.
 IVOA users, especially from outside the core collaboration, should
-always be directed to the document collection rather than be sent
+always be directed to the Document Repository rather than be sent
 private copies of documents.
 
-The IVOA document collection is organized so as to lead readers most
+The IVOA Document Repository is organized so as to lead readers most
 naturally to the current versions of all documents in all document
 classes.  A document archive is also maintained so that previous
-published versions of documents remain available (but not pre-published
-versions of Working Drafts or Proposed Endorsed Notes/Endorsed Notes,
-though working groups may opt to retain this on the TWiki).  The archive
-also contains the “Historical” documents. As an aid to readers, the
-document collection web site has a link to the Community Twiki area 6
-where Working Drafts in-progress may be found, but links will not be
-provided to individual pre-publication Working Drafts.
+published versions of documents remain available.
 
 \appendix
 \section{Changes from Previous Versions}
