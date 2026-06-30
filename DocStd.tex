@@ -115,8 +115,8 @@ Recommendation), REC (Recommendation), PEN (Proposed Endorsed Note) or EN
 \item A concise name, which should be a reasonable condensation of the
 document title.
 
-\item A version number of the form I.J, where I and J are integers 0, 1,
-2, \dots 9, 10, 11, \dots
+\item A version number of the form I.J, where I is a natural number
+greater than zero and and J is an integer greater or equal than zero.
 
 \item A date.  The date is the GMT date on which the current version of
 the document was produced, in the format YYYYMMDD.  (This does not allow
@@ -126,36 +126,36 @@ period.)
 \item An extension (.html, .pdf, .doc, etc.) indicating the media type.
 \end{enumerate}
 
-The first four components are concatenated, separated by hyphens.
+The first four components are concatenated using hyphens.
 
 Version numbers follow these guidelines:
 
 \begin{itemize}
-\item The number to the left of the (first) decimal point starts with 0 for
-documents that are being discussed within a Working Group prior to
-publication for IVOA-wide review.  The number increments to 1 for the
-first public version, and to 2, 3, \dots, for subsequent versions that are
+\item The number to the left of the (first) decimal point starts with 1;
+historically, the IVOA has issued documents with version numbers smaller
+than zero under the assumtpion that compliance to such ``pre-beta''
+documents were a sensible thing to declare.  This has never turned out
+to be a useful practice; pre-REC services either need to be updated or
+shut down in order to obtain a healthy ecosystem.
+
+During the entire initial discussion, from the first Working
+Group-internal discussions up to and including the final REC, the
+version number remains at 1.0; drafts of the document are distinguished
+by document type and date.
+
+\item The major (first part of the) version number increments to 2 for the
+for subsequent versions of a standard that are
 not backward compatible and/or require substantial revisions to
 implementations.
 
 \item The number to the right of the decimal point is an integer counter,
 beginning with 0 and increasing in simple cardinal order (0, 1, 2, \dots
-9, 10, 11, \dots).  This number does not track every revision to a
-document, but rather, denotes a logical version or conceptually
-consistent view.  This number should only be incremented when there are
-significant and substantial changes to text but few (minor) or no
-changes required of implementations. The version number normally remains
+9, 10, 11, \dots).  This number is incremented when a new review cycle
+starts and normally remains
 fixed as a document is promoted from Working Draft to Proposed
 Recommendation to Recommendation, with editorial revisions indicated by
 the change of date.
 
-\item After a document reaches Recommendation or Endorsed Note status,
-subsequent revisions retrace the promotion process.  Changes that are
-backward compatible result in increments in the number to the right of
-the decimal place (1.1, 1.2, \dots).  Changes that are not backward
-compatible require an increment of the number of the left of the decimal
-place (2.0), with subsequent backward compatible revisions following the
-same pattern (2.1, 2.2, \dots).
 \end{itemize}
 
 The final published and approved Recommendation retains the date on the
@@ -166,32 +166,24 @@ The following examples show a typical name and numbering progression for
 a sample document.
 
 \begin{tabular}{lp{0.6\textwidth}}
-NOTE-MyNewIdea-1.0-20081001.pdf & (initial idea)\cr
-WD-ConciseName-0.1-20081225.pdf & (first Working Draft, in WG)\cr
-WD-ConciseName-0.1-20081231.pdf & (revised 6 days later)\cr
-WD-ConciseName-0.2-20090115.pdf & (text revised substantially)\cr
-WD-ConciseName-0.2-20090201.pdf & (final version in WG before PR)\cr
-WD-ConciseName-1.0-20090301.pdf & (published first version)\cr
+NOTE-MyNewIdea-1.0-20081001.pdf & (initial idea; optional)\cr
+WD-ConciseName-1.0-20090101.pdf & (WG-internal draft)\cr
+WD-ConciseName-1.0-20090301.pdf & (first version published in the Doc repo)\cr
+WD-ConciseName-1.0-20090401.pdf & (after WG discussions)\cr
 PR-ConciseName-1.0-20090501.pdf & (promoted to PR)\cr
 PR-ConciseName-1.0-20090615.pdf & (updated after RFC)\cr
-PR-ConciseName-1.0-20090801.pdf & (updated after TCG review)\cr
 REC-ConciseName-1.0.pdf       &   (accepted as REC; date, e.g., 20090901
 appears on title page)\cr
 WD-ConciseName-1.1-20100628.pdf & (first update to WD in WG; does not
 affect implementation)\cr
 WD-ConciseName-1.1-20100715.pdf & (revised text)\cr
-WD-ConciseName-1.1-20100801.pdf & (revised text)\cr
 PR-ConciseName-1.1-20100815.pdf & (promoted to PR)\cr
-PR-ConciseName-1.1-20100915.pdf & (updated after RFC/TCG review)\cr
-PR-ConciseName-1.1-20101001.pdf & (updated after RFC/TCG review)\cr
 REC-ConciseName-1.1.pdf       &   (accepted as REC)\cr
 WD-ConciseName-2.0-20110628.pdf & (major update to WD in WG; does affect
 implementation)\cr\cr
-WD-ConciseName-2.0-20110715.pdf & (revised text)\cr
 WD-ConciseName-2.0-20110801.pdf & (revised text)\cr
 PR-ConciseName-2.0-20110815.pdf & (promoted to PR)\cr
-PR-ConciseName-2.0-20110915.pdf & (updated after RFC/TCG review)\cr
-PR-ConciseName-2.0-20111001.pdf & (updated after RFC/TCG review)\cr
+PR-ConciseName-2.0-20110915.pdf & (updated after RFC)\cr
 REC-ConciseName-2.0.pdf       &   (accepted as REC)\cr
 \end{tabular}
 
@@ -202,8 +194,9 @@ indication of its relationship to the REC (e.g.,
 ConciseName-Implementation).
 
 Names will be reviewed and may be modified by the Document Coordinator
-to be consistent with these conventions.  All versions 1.0 and higher
-are stored in the IVOA Document Repository.
+to be consistent with these conventions.  The document repository will
+keep all versions uploaded to it but will ensure that casual users will
+find the most recent version first.
 
 \subsection{Format}
 
@@ -679,11 +672,14 @@ published versions of documents remain available.
 \appendix
 \section{Changes from Previous Versions}
 
-\subsection{From 2.0 to 2.1}
+\subsection{Changes from Version 2.0}
 
 \begin{itemize}
 \item Now formally requiring both HTML and PDF; also, dropping the
 reference to outdated templates and nudging people towards ivoatex.
+
+\item Removing the concept of 0 as a major version.  As has been the
+practice for at least a decade, documents are born as 1.0.
 \end{itemize}
 
 
