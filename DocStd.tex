@@ -2,6 +2,8 @@
 \input tthdefs
 \input gitmeta
 
+\usepackage{todonotes}
+
 \title{IVOA Document Standards}
 
 \ivoagroup{Standards and Processes}
@@ -526,20 +528,40 @@ successor that IVOA Recommendations be endorsed as IAU Standards.
 \section{Endorsed Notes process}
 \label{sect:en}
 
-Some documents require an endorsement by IVOA but a lighter weight
-review process than the one undergone by the IVOA Recommendations. They
-follow the Endorsed Note process, managed by the Technical Coordination
-Group. This is the case for instance for the IVOA Architecture Documents
-or for implementation notes.
+Certain documents need a certain level of normative power but do not
+quite fit the REC path outlined before, either because they span several
+or all Working Groups, because they are something like annexes to other
+standards, or because they describe policies and practices rather than
+protocols.
+
+For such documents, die IVOA follows the Endorsed Note (EN) process,
+managed by the Technical Coordination Group exclusively.  Some
+prototypical examples for ENs existing at the time of writing are:
+
+\begin{itemize}
+\item  	XML Schema Versioning Policies \citep{2018ivoa.spec.0529H} --
+this is a policy affecting almost all WGs.
+
+\item 	IVOA Architecture \citep{2024ivoa.spec.1114E} -- this is a
+document to which all WGs contribute in the same way and that
+needs to reflect a consensus within the IVOA.
+
+\item Discovering Data Collections Within Services
+\citep{2019ivoa.spec.0520D} -- this is a policy, laying out a practice
+of how Registry standards are applied, to be agreed upon between
+Registry and Apps.
+
+\item Adopting the UAT as an IVOA vocabulary \citep{2022ivoa.spec.0722D}
+-- this is effectively an external annex to Vocabularies in the VO.
+\end{itemize}
 
 \paragraph{Entrance  criteria}  Endorsed  Notes  can  be  proposed  by  an
 Interest  Group,  a  Working Group,  the  Technical  Coordination
 Group,  or  more  generally  be  documents  produced within the IVOA.
 They circulate among the authors, and in the Working Group, Interest
 Group,  or  the  Technical  Coordination  Group  until  they  reach  a
-sufficient  maturity  level.  The  endorsement  process  is  managed  by
-the  Technical  Coordination  Group  and  the Note can be endorsed by a
-Working Group.
+sufficient  maturity  level.  This draft can be published as a normal
+Note beforehand, but this is not required.
 
 \paragraph{Proposed  Endorsed  Note  (optional)}  A  Proposed  Endorsed  Note  is
 submitted  to  a Request for Comment following the procedure described
@@ -556,13 +578,15 @@ to the TCG. The TCG decides the process to apply in the specific case of
 the document. There are two possibilities:
 
 \begin{enumerate}
-\item The  TCG  decides  to  submit  the  possibility  to  promote  the
-Note  to  Endorsed Note  to  a  Request  for  Comments  following  the
-procedure  described  in  Section~\ref{sect:rfc}. The Note is then passed to
-Proposed Endorsed Note (PEN) status.
+\item The  TCG  decides  a  Request  for  Comments  is necessary,
+usually to ensure maximum community participation.  The document is then
+published on the IVOA document repository as a PEN.  This PEN is then
+reviewed like a PR is (see Sect.~\ref{sect:rfc}.
 
-\item The  TCG  decides  that  there  is  no  need  for  a  Request  for
-Comments  and decides to promote the Note directly to Endorsed Note.
+\item The  TCG  decides  that  sufficient community participation has
+taken place for the specific content of the note and that there  is  no
+need  for an RFC period.  It can then promote the document directly to
+Endorsed Note.
 \end{enumerate}
 
 For  each  meeting  of  the  Executive  Committee,  the  TCG  chair
@@ -572,9 +596,7 @@ history. The Executive Committee can withdraw an Endorsed Note with an
 explanation of the withdrawal reason.
 
 Proposed  Endorsed  Notes  and  Endorsed  Notes  appear  in  the  IVOA
-Document Repository.  Endorsed  Notes  linked  to  a  standard  are
-visible  in  the  relevant  standard landing page.
-
+Document Repository.
 
 \section{Errata}
 \label{sect:errata}
@@ -684,6 +706,9 @@ published versions of documents remain available.
 \begin{itemize}
 \item Now formally requiring both HTML and PDF; also, dropping the
 reference to outdated templates and nudging people towards ivoatex.
+
+\item Explicitly sanctioning the existing practice of submitting
+unpublished notes to the TCG for endorsement.
 \end{itemize}
 
 
