@@ -13,7 +13,8 @@ ivoatexmeta.tex
 gitmeta.tex
 *.swp
 role_diagram.svg
+*.tikz.svg
+MANIFEST
 
 # OS-specific
 .DS_Store
-MANIFEST
