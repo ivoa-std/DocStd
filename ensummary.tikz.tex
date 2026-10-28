@@ -1,0 +1,34 @@
+\begingroup
+\usetikzlibrary{positioning}
+\usetikzlibrary{calc}
+\fontfamily{cmss}\selectfont
+\begin{tikzpicture}[
+status/.style={node distance=2.2cm, minimum height=0.9cm,
+  rounded corners=1mm, thin,draw=black!50, text width=3.5cm,
+  align=center},
+procstep/.style={->, line width=1mm},
+nodelabel/.style={color=black}]
+\node (en) [status, fill=green!60, text width=8cm] at (2,5) {Endorsed Note};
+\node (pen) [status, fill=green!40] at (4.5,0) {Proposed Endorsed
+Note};
+\node (note) [status] at (-0.5,0) {Note};
+
+\draw [procstep, color=green!40, out=90, in=270] (pen.north) to
+node[nodelabel,pos=0.5,rotate=310] {\strut Direct TCG Endorsement}
+($(en.south) + (3mm,0)$);
+
+\draw [procstep, color=green!40, out=90, in=270] (note.north) to
+node[nodelabel,pos=0.5,rotate=50] {\strut Direct TCG Endorsement}
+($(en.south) - (3mm,0)$);
+
+\draw [procstep, color=green!40, out=0, in=0] (pen.east) to
+node[nodelabel,pos=0.5,rotate=270] {\strut IVOA-wide RFC}
+(en.east);
+
+\draw [procstep, color=green!40, out=270, in=270] (note.south) to
+node[nodelabel,pos=0.5] {\strut TCG: Have RFC}
+(pen.south);
+
+
+\end{tikzpicture}
+\endgroup
