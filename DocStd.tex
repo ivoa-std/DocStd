@@ -2,6 +2,9 @@
 \input tthdefs
 \input gitmeta
 
+\usepackage{tikz}
+\usepackage{sidecap}
+
 \title{IVOA Document Standards}
 
 \ivoagroup{Standards and Processes}
@@ -455,11 +458,11 @@ Documentation or its successor. The TCG may decide to deprecate a
 Recommendation, which is then kept in the Document repository in the
 “Historical” category.
 
-\begin{figure}
-\includegraphics{procsummary.png}
-\caption{The IVOA REC process in a graphical representation}
+\begin{SCfigure}
+ \tikzfigure{procsummary}
+\caption{The IVOA review process in a graphical representation}
 \label{fig:procsummary}
-\end{figure}
+\end{SCfigure}
 
 \subsection{Document promotion process summary}
 
@@ -517,7 +520,9 @@ successor that IVOA Recommendations be endorsed as IAU Standards.
 \end{enumerate}
 
 \begin{figure}
-\includegraphics{ensummary.png}
+\begin{center}
+\tikzfigure{ensummary}
+\end{center}
 \caption{The IVOA Endorsed Note process in a graphical representation}
 \label{fig:ensummary}
 \end{figure}
