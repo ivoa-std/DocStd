@@ -384,7 +384,16 @@ the “Historical” category.
 Proposed Recommendation may call for a formal Request for Comments
 (RFC).  The RFC is sent to the widest possible IVOA distribution lists
 (interop@ivoa.net) and published by adding a link to the RFC on the IVOA
-document repository web page.  Distribution of the RFC initiates a
+document repository web page.
+
+At RFC time, any accompanying machine-readable documents such as XML
+Schema or VO-DML files are uploaded into the respective IVOA
+repositories.  In particular, the namespace URI of the XML schema now
+resolves to the schema under review.  This way, if due to an oversight
+there is an incompatibility in a minor version step, it will be caught
+with higher likelihod before changes would require Errata.
+
+Distribution of the RFC initiates a
 six-week public review period.  All comments submitted during this
 review period must be posted publicly and responded to publicly.  The
 chair and vice-chair of the other Working Groups must examine the
